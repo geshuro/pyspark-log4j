@@ -41,14 +41,15 @@ def start_spark_env():
 def proceso():
 	log.info("INICIO: proceso")
     try:
-    #Logica de proceso
-    log.debug("Proceso se ejecuto en X minutos")
-    log.warn("Proceso supero el umbral de ejecucion X minutos")
+        #Logica de proceso
+        log.debug("Proceso se ejecuto en X minutos")
+        log.warn("Proceso supero el umbral de ejecucion X minutos")
     except AnalysisException as ae:
         log.error("Ocurrio el siguiente error: {}".format(ae.message))
         pass
-	log.info("FIN: proceso")
-	pass
+        
+    log.info("FIN: proceso")
+    pass
 
 def main():
 	global spark
